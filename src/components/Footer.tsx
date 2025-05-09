@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Activity, Heart, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-primary">Home</a></li>
+              <li><Link to="/" className="hover:text-primary">Home</Link></li>
               <li><a href="#calculator" className="hover:text-primary">BMI Calculator</a></li>
               <li><a href="#what-is-bmi" className="hover:text-primary">About BMI</a></li>
               <li><a href="#faq" className="hover:text-primary">FAQ</a></li>
@@ -61,10 +62,11 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mb-4 md:mb-0">
               &copy; {new Date().getFullYear()} BMI Insights. All rights reserved.
             </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="hover:text-primary">Privacy Policy</a>
-              <a href="#" className="hover:text-primary">Terms of Service</a>
-              <a href="#" className="hover:text-primary">Cookie Policy</a>
+            <div className="flex flex-wrap space-x-6 text-sm justify-center gap-y-2">
+              <Link to="/privacy-policy" className="hover:text-primary">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="hover:text-primary">Terms of Service</Link>
+              <Link to="/medical-disclaimer" className="hover:text-primary">Medical Disclaimer</Link>
+              <Link to="/sitemap" className="hover:text-primary">Sitemap</Link>
             </div>
           </div>
           
