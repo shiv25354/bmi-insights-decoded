@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
+import { TopLeaderboard, InContentBanner } from '@/components/AdPlacements';
 
 const Sitemap = () => {
   // Define the structure of our site
@@ -58,6 +59,8 @@ const Sitemap = () => {
           </div>
         </section>
 
+        <TopLeaderboard />
+
         <section className="py-12">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-8">
@@ -85,6 +88,8 @@ const Sitemap = () => {
             </div>
           </div>
         </section>
+
+        <InContentBanner />
       </main>
       <Footer />
     </div>

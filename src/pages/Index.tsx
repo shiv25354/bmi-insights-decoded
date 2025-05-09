@@ -11,6 +11,7 @@ import { WhatIsBmi, HowBmiCalculated, BmiCategories, BmiUses, HealthImplications
 import Faq from '@/components/Faq';
 import TakeAction from '@/components/TakeAction';
 import TestimonialsSection from '@/components/TestimonialsSection';
+import { TopLeaderboard, InContentBanner } from '@/components/AdPlacements';
 
 const Index = () => {
   return (
@@ -18,18 +19,23 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <TopLeaderboard />
         <ProblemSection />
         <WhatIsBmi />
         <HowBmiCalculated />
+        <InContentBanner />
         <BmiCalculator />
         <SolutionSection />
+        <InContentBanner />
         <BmiCategories />
         <TopPicksSection />
+        <InContentBanner />
         <BmiUses />
         <HealthImplications />
         <BmiLimitations />
         <AlternativeMeasures />
         <TestimonialsSection />
+        <InContentBanner />
         <Faq />
         <TakeAction />
       </main>
