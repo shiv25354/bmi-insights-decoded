@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface ContentSectionProps {
   id: string;
@@ -10,11 +10,16 @@ interface ContentSectionProps {
 
 const ContentSection = ({ id, title, children }: ContentSectionProps) => {
   return (
-    <section id={id} className="py-8">
+    <section id={id} className="py-12">
       <div className="container">
-        <h2>{title}</h2>
-        <Card className="section-card">
-          {children}
+        <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>
+        <Card className="shadow-md">
+          <CardHeader className="bg-primary/5 border-b">
+            <CardTitle className="text-2xl font-semibold">{title}</CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6">
+            {children}
+          </CardContent>
         </Card>
       </div>
     </section>
